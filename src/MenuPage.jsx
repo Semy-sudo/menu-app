@@ -27,7 +27,6 @@ const menuData = {
     { name: "잭허니아포가토", price: "13,000" },
     { name: "세상의 모든 감자튀김", price: "1인 6900 / 2인 11900" },
     { name: "프랑크푸르트 모둠소시지", price: "17,900" },
-    
   ],
   "칵테일": [
     { name: "짐빔 하이볼", price: "11,900" },
@@ -68,8 +67,8 @@ const menuData = {
     { name: "아란 10Y", price: "19,000" },
     { name: "아란 셰리 캐스크", price: "33,000" },
     { name: "헤네시 VSOP", price: "20,000" },
-    { name: "조니워커 블루", price: "bottle 400,000" },
-    { name: "로얄살루트 21Y", price: "bottle 540,000" },
+    { name: "조니워커 블루", glass: "싯가" },
+    { name: "로얄살루트 21Y", glass: "싯가" },
     { name: "사장님픽 위스키", glass: "싯가" }
   ],
 };
@@ -79,20 +78,21 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="min-h-screen bg-neutral-200 flex flex-col items-center p-6">
+    <div className="min-h-screen bg-neutral-200 flex flex-col items-center p-6 gap-6">
+      
       {/* 상단 브랜드 영역 */}
-      <div className="bg-yellow-100 border border-black rounded-xl p-6 max-w-xl text-center shadow-lg">
-        <div className="text-3xl font-extrabold bg-black text-yellow-100 px-4 py-1 rounded-lg inline-block mb-4">
+      <div className="bg-yellow-100 border border-black rounded-2xl p-6 max-w-xl text-center shadow-lg">
+        <div className="text-3xl font-extrabold bg-black text-yellow-100 px-4 py-1 rounded-xl inline-block mb-4">
           사운드예술
         </div>
         <p className="text-sm text-gray-800 leading-relaxed mb-6">
-          사운드예술은 먹고 마실 수 있는 작은 펍 입니다. <br />
-          매장에서 맛있게 드셨던 맛있게 마셨던 <br />
-          다양한 스낵/주류제품들을 즐기실 수 있습니다. <br />
+          사운드예술은 다양한 주류와 함께 음악/영화 감상을 할 수 있는 펍입니다. <br />
+          신청곡 작성해주시면 틀어드립니다^^ <br />
+          혼술/단체 모두 환영 합니다. <br />
         </p>
 
         {/* 외부 음식/주류 안내 */}
-        <div className="bg-yellow-50 border border-black rounded-lg p-4 text-sm text-gray-800 mb-6">
+        <div className="bg-yellow-50 border border-black rounded-xl p-4 text-sm text-gray-800 mb-6">
           <p className="font-semibold mb-2">『외부 음식/주류 반입시 참고 부탁드립니다.』</p>
           <p className="mb-1">□ 외부 음식 : 무료 </p>
           <p className="mb-1">□ 외부 주류</p>
@@ -107,12 +107,12 @@ export default function MenuPage() {
       </div>
 
       {/* 카테고리 버튼 */}
-      <div className="flex gap-2 overflow-x-auto pb-3 mt-8">
+      <div className="flex gap-3 overflow-x-auto pb-3 mt-4">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition ${
+            className={`px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition ${
               activeCategory === cat
                 ? "bg-black text-yellow-100"
                 : "bg-neutral-300 hover:bg-neutral-400 text-black"
@@ -124,14 +124,16 @@ export default function MenuPage() {
       </div>
 
       {/* 메뉴 리스트 */}
-      <div className="mt-6 w-full max-w-xl bg-yellow-50 border border-black rounded-lg p-4 shadow">
+      <div className="mt-6 w-full max-w-xl bg-yellow-50 border border-black rounded-2xl p-6 shadow">
         {menuData[activeCategory].map((item, idx) => (
           <div
             key={idx}
-            className="flex justify-between items-center border-b border-neutral-300 pb-2 mb-2 last:border-0 last:pb-0 last:mb-0"
+            className="flex justify-between items-center border-b border-neutral-300 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0 rounded-lg"
           >
             <span className="text-gray-900">{item.name}</span>
-            <span className="text-black font-bold">{item.price}원</span>
+            <span className="text-black font-bold">
+              {item.price ? `${item.price}원` : item.glass || ""}
+            </span>
           </div>
         ))}
       </div>
