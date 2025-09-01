@@ -78,32 +78,29 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="min-h-screen bg-neutral-200 flex flex-col items-center p-6 gap-6">
-      
+    <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] to-[#2c2c2c] flex flex-col items-center p-6 gap-6 text-[#f5f5dc]">
       {/* 상단 브랜드 영역 */}
-      <div className="bg-yellow-100 border border-black rounded-2xl p-6 max-w-xl text-center shadow-lg">
-        <div className="text-3xl font-extrabold bg-black text-yellow-100 px-4 py-1 rounded-xl inline-block mb-4">
+      <div className="bg-[#2b2b2b] border border-[#c5a572] rounded-2xl p-6 max-w-xl text-center shadow-xl">
+        <div className="text-3xl font-extrabold bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black px-6 py-2 rounded-xl inline-block mb-4 tracking-wide">
           사운드예술
         </div>
-        <p className="text-sm text-gray-800 leading-relaxed mb-6">
+        <p className="text-sm text-gray-300 leading-relaxed mb-6">
           사운드예술은 다양한 주류와 함께 음악/영화 감상을 할 수 있는 펍입니다. <br />
           신청곡 작성해주시면 틀어드립니다^^ <br />
           혼술/단체 모두 환영 합니다. <br />
         </p>
 
         {/* 외부 음식/주류 안내 */}
-        <div className="bg-yellow-50 border border-black rounded-xl p-4 text-sm text-gray-800 mb-6">
-          <p className="font-semibold mb-2">『외부 음식/주류 반입시 참고 부탁드립니다.』</p>
+        <div className="bg-[#1f1f1f] border border-[#c5a572] rounded-xl p-4 text-sm text-gray-200 mb-6">
+          <p className="font-semibold text-[#d4af37] mb-2">『외부 음식/주류 반입시 참고 부탁드립니다.』</p>
           <p className="mb-1">□ 외부 음식 : 무료 </p>
           <p className="mb-1">□ 외부 주류</p>
           <p className="ml-4">와인 30,000원</p>
           <p className="ml-4">위스키 50,000원 (병당 기준)</p>
         </div>
 
-        <p className="text-xs text-gray-600">
-          * 이용자 여러분의 즐거운 시간을 위하여 쾌적하게 이용 부탁드립니다. <br />
-        </p>
-        <p className="text-gray-700 mt-2 font-semibold">@sound_ye_sul</p>
+        <p className="text-xs text-gray-400">* 즐거운 시간을 위하여 쾌적하게 이용 부탁드립니다.</p>
+        <p className="text-[#c5a572] mt-2 font-semibold">@sound_ye_sul</p>
       </div>
 
       {/* 카테고리 버튼 */}
@@ -112,11 +109,12 @@ export default function MenuPage() {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition ${
-              activeCategory === cat
-                ? "bg-black text-yellow-100"
-                : "bg-neutral-300 hover:bg-neutral-400 text-black"
-            }`}
+            className={`px-5 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition 
+              ${
+                activeCategory === cat
+                  ? "bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black shadow-md"
+                  : "bg-[#3a3a3a] text-gray-200 hover:bg-[#4a4a4a]"
+              }`}
           >
             {cat}
           </button>
@@ -124,14 +122,14 @@ export default function MenuPage() {
       </div>
 
       {/* 메뉴 리스트 */}
-      <div className="mt-6 w-full max-w-xl bg-yellow-50 border border-black rounded-2xl p-6 shadow">
+      <div className="mt-6 w-full max-w-xl bg-[#1e1e1e] border border-[#c5a572] rounded-2xl p-6 shadow-lg">
         {menuData[activeCategory].map((item, idx) => (
           <div
             key={idx}
-            className="flex justify-between items-center border-b border-neutral-300 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0 rounded-lg"
+            className="flex justify-between items-center border-b border-gray-600 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0"
           >
-            <span className="text-gray-900">{item.name}</span>
-            <span className="text-black font-bold">
+            <span className="text-gray-200">{item.name}</span>
+            <span className="text-[#d4af37] font-bold">
               {item.price ? `${item.price}원` : item.glass || ""}
             </span>
           </div>
