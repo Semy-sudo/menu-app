@@ -129,7 +129,7 @@ export default function MenuPage() {
   <div className="mb-4 p-4 bg-[#2b2b2b] border border-[#d4af37] rounded-xl text-center shadow-md">
     {/* 이미지 */}
     <img 
-      src="../public/images/감튀사진.png"   // 👉 public/images 폴더에 저장
+      src="../public/images/frenchfries.png"   // 👉 public/images 폴더에 저장
       alt="Beer and Fries"
       className="mx-auto mb-3 rounded-lg shadow-md w-40 h-auto"
     />
