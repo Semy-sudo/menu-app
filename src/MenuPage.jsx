@@ -29,8 +29,6 @@ const menuData = {
     { name: "프랑크푸르트 모둠소시지", price: "17,900" },
   ],
   "칵테일": [
-  { name: "짐빔 하이볼", price: "11,900", description: "부드럽고 산뜻한 버번의 시원한 시작!" },
-  { name: "산토리/조니워커 하이볼", price: "12,900", description: "위스키와 탄산의 완벽한 조화" },
   { name: "진토닉", price: "14,900", description: "시트러스 향 가득, 가장 클래식한 칵테일" },
   { name: "핸드릭스 진토닉", price: "17,900", description: "오이와 장미 향이 어우러진 고급 진토닉" },
   { name: "x토닉", price: "15,900", description: "진하고 깊은 맛, 독특한 토닉의 매력" },
