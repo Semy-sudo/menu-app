@@ -3,9 +3,9 @@ import { useState } from "react";
 const menuData = {
   "생맥주": [
     { name: "기네스", price: "13,000" },
-    { name: "APA", price: "11,500" },
-    { name: "라거", price: "8,900" },
-    { name: "클라우드", price: "6,900" }
+    { name: "과일향과 구운맥아의 미국식 페일에일 APA", price: "11,500" },
+    { name: "청량감 가득 라거", price: "8,900" },
+    { name: "바이엔슈테판 헤페바이스", price: "12,000" }
   ],
   "병맥주": [
     { name: "기린", price: "8,900" },
