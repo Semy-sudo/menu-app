@@ -71,6 +71,13 @@ const menuData = {
     { name: "로얄살루트 21Y", price: "BOTTLE 640,000" },
     { name: "사장님픽 위스키", glass: "싯가" }
   ],
+  "하이볼": [
+    { name: "짐빔 하이볼", price: "12,900" },
+    { name: "산토리 레몬 하이볼", price: "12,900" },
+    { name: "조니워커 진저에일 하이볼", price: "13,900" },
+    { name: "제임슨 하이볼", price: "15,000" },
+    { name: "발베니 진저에일 하이볼", price: "16,000" }
+  ],
 };
 
 export default function MenuPage() {
@@ -160,10 +167,11 @@ export default function MenuPage() {
       </span>
     </div>
     {item.description && (
-       <p className="text-xs text-gray-400 italic mt-1 text-left">
-        {item.description}
-      </p>
-    )}
+  <p className="text-xs text-[#d4af37] mt-1 text-left">
+    {item.description}
+  </p>
+)}
+
   </div>
 ))}
 
