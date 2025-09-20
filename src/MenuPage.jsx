@@ -83,7 +83,7 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="min-h-screen w-full max-w-full bg-gradient-to-br from-[#1a1a1a] to-[#2c2c2c] flex flex-col items-center p-6 gap-6 text-[#f5f5dc]">
+    <div className="min-h-screen w-full max-w-full bg-gradient-to-br from-[#1a1a1a] to-[#2c2c2c] flex flex-col items-center px-0 py-6 gap-6 text-[#f5f5dc]">
       {/* 상단 브랜드 영역 */}
       <div className="bg-[#2b2b2b] border border-[#c5a572] rounded-2xl p-6 max-w-xl text-center shadow-xl">
         <div className="text-3xl font-extrabold bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black px-6 py-2 rounded-xl inline-block mb-4 tracking-wide">
@@ -127,7 +127,7 @@ export default function MenuPage() {
       </div>
 
       {/* 메뉴 리스트 */}
-      <div className="mt-6 w-full max-w-full md:max-w-xl bg-[#1e1e1e] border border-[#c5a572] rounded-2xl p-6 shadow-lg">
+      <div className="mt-6 w-full max-w-full md:max-w-xl mx-auto bg-[#1e1e1e] border border-[#c5a572] rounded-2xl p-6 shadow-lg">
        
        {/* 생맥주 이벤트 문구 */}
 {activeCategory === "생맥주" && (
