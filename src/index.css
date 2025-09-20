@@ -45,12 +45,13 @@ a:hover {
 
 /* body 기본 세팅 */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(to bottom right, #1a1a1a, #2c2c2c);
+
+  /* 이거 지우는 게 좋아 */
+  display: block;
+  place-items: unset;
 }
 
 /* 제목 스타일 */
