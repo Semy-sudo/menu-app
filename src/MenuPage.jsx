@@ -3,11 +3,11 @@ import { useState } from "react";
 const menuData = {
   "생맥주": [
     { name: "기네스", price: "13,000" },
-    { name: "과일향과 구운맥아의 미국식 페일에일 APA", price: "11,500" },
-    { name: "청량감 가득 라거", price: "8,900" },
+    { name: "과일향과 구운맥아의 미국식 페일에일 - APA", price: "11,500" },
+    { name: "청량감 - 기본 라거", price: "8,900" },
     { name: "바이엔슈테판 헤페바이스", price: "12,000" },
-    { name: "홉 의 개성이 살아있는 러거 꿀꺽(*신메뉴)", price: "11,000" },
-    { name: "커피, 초콜릿, 7가지 맥아의 다크에일 캄캄(*신메뉴)", price: "13,000" }
+    { name: "홉의 개성을 느낄수 있는 라거 - 꿀꺽(*신메뉴)", price: "11,000" },
+    { name: "커피, 초콜릿, 7가지 맥아의 다크에일 - 캄캄(*신메뉴)", price: "13,000" }
   ],
   "병맥주": [
     { name: "기린", price: "8,900" },
@@ -31,23 +31,23 @@ const menuData = {
     { name: "프랑크푸르트 모둠소시지", price: "17,900" },
   ],
   "칵테일": [
-  { name: "진토닉", price: "14,900", description: "시트러스 향 가득, 가장 클래식한 칵테일" },
-  { name: "핸드릭스 진토닉", price: "17,900", description: "오이와 장미 향이 어우러진 고급 진토닉" },
-  { name: "x토닉", price: "15,900", description: "진하고 깊은 맛, 독특한 토닉의 매력" },
-  { name: "갓파더", price: "17,900", description: "위스키와 아마레토의 진한 한 방울" },
-  { name: "갓마더", price: "16,900", description: "보드카와 아마레토가 선사하는 부드러운 달콤함" },
-  { name: "마티니", price: "22,900", description: "007이 사랑한, 강렬하면서도 우아한 칵테일" },
-  { name: "보드카 토닉", price: "11,900", description: "깔끔하고 청량한 보드카의 시원한 매력" },
-  { name: "화이트 러시안", price: "19,900", description: "달콤한 크림과 커피 리큐르의 부드러운 유혹" },
-  { name: "프리미엄 블랙 러시안", price: "22,900", description: "진한 커피 리큐르와 보드카의 묵직한 한 잔" },
-  { name: "파우스트", price: "23,900", description: "악마의 속삭임, 도수는 높지만 취기는 확실하다!" },
-  { name: "아이리쉬카밤", price: "16,900", description: "한 번에 폭발하는 아일랜드의 강렬한 매력" },
-  { name: "블루 라군", price: "19,900", description: "시원한 블루 빛깔, 바다 같은 청량감" },
-  { name: "깔루아 코크/밀크", price: "10,900", description: "커피 리큐르의 달콤함과 부드러운 조화" },
-  { name: "말리부 오렌지/콕/밀크", price: "10,900", description: "코코넛 향이 가득한 트로피컬 무드" },
-  { name: "모히토", price: "16,900", description: "민트와 라임이 선사하는 상쾌한 청량감" },
-  { name: "잭콕", price: "14,900", description: "전설적인 조합, 잭다니엘과 콜라의 클래식" },
-  { name: "잭허니 밀크", price: "15,900", description: "꿀처럼 달콤하고 부드러운 잭허니의 변주" }
+    { name: "진토닉", price: "14,900", description: "시트러스 향 가득, 가장 클래식한 칵테일" },
+    { name: "핸드릭스 진토닉", price: "17,900", description: "오이와 장미 향이 어우러진 고급 진토닉" },
+    { name: "x토닉", price: "15,900", description: "진하고 깊은 맛, 독특한 토닉의 매력" },
+    { name: "갓파더", price: "17,900", description: "위스키와 아마레토의 진한 한 방울" },
+    { name: "갓마더", price: "16,900", description: "보드카와 아마레토가 선사하는 부드러운 달콤함" },
+    { name: "마티니", price: "22,900", description: "007이 사랑한, 강렬하면서도 우아한 칵테일" },
+    { name: "보드카 토닉", price: "11,900", description: "깔끔하고 청량한 보드카의 시원한 매력" },
+    { name: "화이트 러시안", price: "19,900", description: "달콤한 크림과 커피 리큐르의 부드러운 유혹" },
+    { name: "프리미엄 블랙 러시안", price: "22,900", description: "진한 커피 리큐르와 보드카의 묵직한 한 잔" },
+    { name: "파우스트", price: "23,900", description: "악마의 속삭임, 도수는 높지만 취기는 확실하다!" },
+    { name: "아이리쉬카밤", price: "16,900", description: "한 번에 폭발하는 아일랜드의 강렬한 매력" },
+    { name: "블루 라군", price: "19,900", description: "시원한 블루 빛깔, 바다 같은 청량감" },
+    { name: "깔루아 코크/밀크", price: "10,900", description: "커피 리큐르의 달콤함과 부드러운 조화" },
+    { name: "말리부 오렌지/콕/밀크", price: "10,900", description: "코코넛 향이 가득한 트로피컬 무드" },
+    { name: "모히토", price: "16,900", description: "민트와 라임이 선사하는 상쾌한 청량감" },
+    { name: "잭콕", price: "14,900", description: "전설적인 조합, 잭다니엘과 콜라의 클래식" },
+    { name: "잭허니 밀크", price: "15,900", description: "꿀처럼 달콤하고 부드러운 잭허니의 변주" }
   ],
   "위스키": [
     { name: "이달의 위스키", price: "9,900" },
@@ -131,53 +131,59 @@ export default function MenuPage() {
       {/* 메뉴 리스트 */}
       <div className="mt-6 w-full max-w-full md:max-w-xl mx-auto bg-[#1e1e1e] border border-[#c5a572] rounded-2xl p-6 shadow-lg">
        
-       {/* 생맥주 이벤트 문구 */}
-{activeCategory === "생맥주" && (
-  <div className="mb-4 p-4 bg-[#2b2b2b] border border-[#d4af37] rounded-xl text-center shadow-md">
-    {/* 이미지 */}
-    <img 
-      src="/images/frenchfries.png"   // 👉 public/images 폴더에 저장
-      alt="Beer and Fries"
-      className="mx-auto mb-3 rounded-lg shadow-md w-40 h-auto"
-    />
-    
-    {/* 가격 이벤트 */}
-    <p className="text-sm text-[#f5f5dc] mb-1">
-      <span className="text-[#e2ca7a] font-bold">감자튀김       </span> 
-      <span className="line-through text-gray-500 mr-2">6,900원</span>
-      <span className="text-[#d4af37] font-bold">5,900원</span> (1인 기준)
-    </p>
-    
-    {/* 프라이즈 문구 */}
-    <p className="text-xs text-gray-300">
-      🍟 바삭한 감튀와 함께 즐겨보세요!
-    </p>
-  </div>
-)}
+        {/* 생맥주 이벤트 문구 */}
+        {activeCategory === "생맥주" && (
+          <div className="mb-4 p-4 bg-[#2b2b2b] border border-[#d4af37] rounded-xl text-center shadow-md">
+            {/* 이미지 */}
+            <img 
+              src="/images/frenchfries.png"   // 👉 public/images 폴더에 저장
+              alt="Beer and Fries"
+              className="mx-auto mb-3 rounded-lg shadow-md w-40 h-auto"
+            />
+            
+            {/* 가격 이벤트 */}
+            <p className="text-sm text-[#f5f5dc] mb-1">
+              <span className="text-[#e2ca7a] font-bold">감자튀김 </span> 
+              <span className="line-through text-gray-500 mr-2">6,900원</span>
+              <span className="text-[#d4af37] font-bold">5,900원</span> (1인 기준)
+            </p>
+            
+            {/* 프라이즈 문구 */}
+            <p className="text-xs text-gray-300">
+              🍟 바삭한 감튀와 함께 즐겨보세요!
+            </p>
+          </div>
+        )}
         
-        {menuData[activeCategory].map((item, idx) => (
-  <div
-    key={idx}
-    className="border-b border-gray-600 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0"
-  >
-    <div className="flex justify-between items-center">
-      <span className="text-gray-200 font-semibold">{item.name}</span>
-      <span className="text-[#d4af37] font-bold">
-        {item.price ? `${item.price}원` : item.glass || ""}
-      </span>
-    </div>
-    {item.description && (
-  <p className="text-xs text-[#d4af37] mt-1 text-left">
-    {item.description}
-  </p>
-)}
+        {menuData[activeCategory].map((item, idx) => {
+          const isNew = item.name.includes("(*신메뉴)");
+          return (
+            <div
+              key={idx}
+              className="border-b border-gray-600 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0"
+            >
+              <div className="flex justify-between items-center">
+                <span className="text-gray-200 font-semibold flex items-center gap-2">
+                  {isNew ? item.name.replace("(*신메뉴)", "") : item.name}
+                  {isNew && (
+                    <span className="text-xs bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black px-2 py-0.5 rounded-full font-bold shadow">
+                      신메뉴
+                    </span>
+                  )}
+                </span>
+                <span className="text-[#d4af37] font-bold">
+                  {item.price ? `${item.price}원` : item.glass || ""}
+                </span>
+              </div>
 
-  </div>
-))}
-
-
-
-
+              {item.description && (
+                <p className="text-xs text-[#d4af37] mt-1 text-left">
+                  {item.description}
+                </p>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
