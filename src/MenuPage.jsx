@@ -148,9 +148,9 @@ export default function MenuPage() {
             
             {/* 가격 이벤트 */}
             <p className="text-sm text-[#f5f5dc] mb-1">
-              <span className="text-[#e2ca7a] font-bold">감자튀김 </span> 
-              <span className="line-through text-gray-500 mr-2">6,900원</span>
-              <span className="text-[#d4af37] font-bold">5,900원</span> (1인 기준)
+              <span className="text-[#e2ca7a] font-bold">생맥 주문시! 감자튀김 </span> 
+              <span className="line-through text-gray-500 mr-2">10,000원</span>
+              <span className="text-[#d4af37] font-bold">9,000원</span>
             </p>
             
             {/* 프라이즈 문구 */}
