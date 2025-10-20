@@ -5,7 +5,7 @@ const menuData = {
     { name: "기네스", price: "13,000" },
     { name: "과일향과 구운맥아의 미국식 페일에일 - APA", price: "11,500" },
     { name: "청량감 - 기본 라거", price: "8,900" },
-    { name: "[임시품절]홉의 개성을 느낄수 있는 라거 - 꿀꺽(*신메뉴)", price: "11,000" },
+    { name: "홉의 개성을 느낄수 있는 라거 - 꿀꺽(*신메뉴)", price: "11,000" },
     { name: "[임시품절]커피, 초콜릿, 7가지 맥아의 다크에일 - 캄캄(*신메뉴)", price: "13,000" }
   ],
   "병맥주": [
@@ -96,7 +96,7 @@ export default function MenuPage() {
           사운드예술
         </div>
         <p className="text-sm text-gray-300 leading-relaxed mb-6">
-          사운드예술은 다양한 주류와 함께 음악/영화 감상을 할 수 있는 펍입니다. <br />
+          사운드예술은 다양한 주류와 음악/영화/스포츠 감상 펍입니다. <br />
           신청곡 작성해주시면 틀어드립니다^^ <br />
           혼술/단체 모두 환영 합니다. <br />
         </p>
@@ -110,7 +110,6 @@ export default function MenuPage() {
           <p className="ml-4">위스키 50,000원 (병당 기준)</p>
         </div>
 
-        <p className="text-xs text-gray-400">* 즐거운 시간을 위하여 쾌적하게 이용 부탁드립니다.</p>
         <p className="text-[#c5a572] mt-2 font-semibold">@sound_ye_sul</p>
       </div>
 
