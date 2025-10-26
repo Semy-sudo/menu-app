@@ -69,7 +69,7 @@ const menuData = {
     { name: "아드백 10Y", price: "22,000" },
     { name: "발렌타인 17Y", price: "32,000" },
     { name: "라프로익 10Y", price: "22,000" },
-    { name: "카발란 클래식", price: "22,000" },
+    { name: "카발란 클래식", price: "23,000" },
     { name: "아란 10Y", price: "19,000" },
     { name: "아란 셰리 캐스크", price: "33,000" },
     { name: "헤네시 VSOP", price: "20,000" },
