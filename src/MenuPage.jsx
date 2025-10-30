@@ -1,5 +1,72 @@
 import { useState } from "react";
 
+const whiskyGroups = [
+  {
+    title: "🇺🇸 미국 (버번)",
+    items: [
+      { name: "메이커스마크 버번", price: "12,000원 / 9만" },
+      { name: "우드포드리저브", price: "15,000원 / 16만" },
+    ],
+  },
+  {
+    title: "🇮🇪 아일랜드 (버번 캐스크)",
+    items: [{ name: "부쉬밀 10Y", price: "12,000원 / 13만" }],
+  },
+  {
+    title: "🏴 스코틀랜드 / 스페이사이드 (셰리 / 밸런스)",
+    items: [
+      { name: "발베니 12Y", price: "22,000원 / 30만" },
+      { name: "발베니 14Y 캐리비안 캐스크", price: "29,000원 / 40만" },
+      { name: "맥캘란 더블 캐스크", price: "19,000원 / 29만" },
+      { name: "맥캘란 셰리 캐스크", price: "29,000원 / 38만" },
+      { name: "글랜피딕 15Y", price: "23,000원 / 29만" },
+      { name: "발렌타인 10Y", price: "13,000원 / 8만" },
+      { name: "발렌타인 17Y", price: "32,000원 / 30만" },
+      { name: "로얄살루트 21Y (Bottle Only)", price: "54만" },
+    ],
+  },
+  {
+    title: "🏴 스코틀랜드 / 아일라 (피트, 스모키)",
+    items: [
+      { name: "아드백 10Y", price: "22,000원 / 30만" },
+      { name: "라프로익 10Y", price: "22,000원 / 32만" },
+      { name: "조니워커 블랙", price: "13,000원 / 12만" },
+      { name: "조니워커 그린", price: "15,000원" },
+      { name: "조니워커 루비", price: "17,000원" },
+      { name: "조니워커 블루 (Bottle Only)", price: "45만" },
+    ],
+  },
+  {
+    title: "🇹🇼 대만 (셰리 / 와인 캐스크)",
+    items: [
+      { name: "카발란 트리플 셰리", price: "32,000" },
+      { name: "카발란 비노바리크", price: "42,000" },
+    ],
+  },
+  {
+    title: "🏴 스코틀랜드 / 아란섬",
+    items: [
+      { name: "아란 10Y", price: "19,000원 / 25만" },
+      { name: "아란 셰리 캐스크", price: "33,000원 / 35만" },
+    ],
+  },
+  {
+    title: "🇫🇷 프랑스 (코냑)",
+    items: [
+      { name: "헤네시 VSOP", price: "20,000원 / 29만" },
+      { name: "레미마틴 VSOP", price: "22,000원 / 30만" }
+    ],
+  },
+  {
+    title: "🇲🇽 멕시코 (데킬라)",
+    items: [
+      { name: "호세 쿠엘보", price: "12,000원 / 8만" },
+      { name: "1800 아네호", price: "18,000원 / 25만" },
+    ],
+  },
+];
+
+
 const menuData = {
   "생맥주": [
     { name: "기네스", price: "13,000" },
@@ -27,13 +94,14 @@ const menuData = {
   "안주": [
     { name: "기본초콜릿", price: "3,000" },
     { name: "팝콘", price: "4,000" },
-    { name: "마약치즈크래커", price: "6,500" },
+    { name: "마약치즈크래커", price: "5,500" },
+    { name: "수제 카사타(*신메뉴)", price: "8,000" },
     { name: "참치치즈카나페", price: "15,000" },
     { name: "1인과일볼", price: "12,900" },
     { name: "치즈나쵸", price: "9,000" },
     { name: "1인마른안주(육포+마요소스 & 견과류)", price: "8,000" },
-    { name: "세상의 모든 감자튀김", price: "10,000" },
-    { name: "프랑크푸르트 모둠소시지", price: "17,900" },
+    { name: "감자튀김", price: "10,000" },
+    { name: "커리부어스트 소시지(*신메뉴)", price: "13,000" },
   ],
   "칵테일": [
     { name: "진토닉", price: "14,900", description: "시트러스 향 가득, 가장 클래식한 칵테일" },
@@ -57,6 +125,8 @@ const menuData = {
   "위스키": [
     { name: "이달의 위스키", price: "9,900" },
     { name: "조니워커 블랙", price: "13,000" },
+    { name: "조니워커 그린", price: "15,000" },
+    { name: "조니워커 루비", price: "17,000" },
     { name: "발베니 12Y", price: "22,000" },
     { name: "발베니 14Y 캐리비안 캐스크", price: "29,000" },
     { name: "메이커스마크 버번", price: "12,000" },
@@ -69,7 +139,8 @@ const menuData = {
     { name: "아드백 10Y", price: "22,000" },
     { name: "발렌타인 17Y", price: "32,000" },
     { name: "라프로익 10Y", price: "22,000" },
-    { name: "카발란 클래식", price: "23,000" },
+    { name: "카발란 트리플 셰리", price: "32,000" },
+    { name: "카발란 비노바리크", price: "4,000" },
     { name: "아란 10Y", price: "19,000" },
     { name: "아란 셰리 캐스크", price: "33,000" },
     { name: "헤네시 VSOP", price: "20,000" },
@@ -97,11 +168,35 @@ export default function MenuPage() {
         <div className="text-3xl font-extrabold bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black px-6 py-2 rounded-xl inline-block mb-4 tracking-wide">
           사운드예술
         </div>
-        <p className="text-sm text-gray-300 leading-relaxed mb-6">
-          사운드예술은 다양한 주류와 음악/영화/스포츠 감상 펍입니다. <br />
-          신청곡 작성해주시면 틀어드립니다^^ <br />
-          혼술/단체 모두 환영 합니다. <br />
-        </p>
+        <div className="bg-gradient-to-r from-amber-900/40 to-yellow-800/20 rounded-2xl p-4 border border-amber-600/50 shadow-lg mb-6">
+  <h3 className="text-lg font-extrabold text-amber-400 mb-3 flex items-center gap-2">
+    💡 오늘의 꿀팁
+  </h3>
+  <ul className="text-sm text-gray-100 space-y-2 leading-relaxed font-medium">
+    <li>
+      <span className="text-amber-400 font-semibold">TIP 1.</span> 신청곡(제목/가수) 작성해 주시면{" "}
+      <span className="font-bold text-white">다 틀어드립니다 🎶</span>
+    </li>
+    <li>
+      <span className="text-amber-400 font-semibold">TIP 2.</span> 영수증 리뷰 시{" "}
+      <span className="font-bold text-white">팝콘 무료 🍿</span>
+    </li>
+    <li>
+      <span className="text-amber-400 font-semibold">TIP 3.</span> 넌센스 퀴즈 3개 맞추시면{" "}
+      <span className="font-bold text-white">도파민초콜릿 제공 🍫</span>
+    </li>
+    <li>
+      <span className="text-amber-400 font-semibold">TIP 4.</span> 알바생이랑 젠가 이기면{" "}
+      <span className="font-bold text-white">칵테일 한잔 무료 🍸</span>
+    </li>
+    <li>
+      <span className="text-amber-400 font-semibold">TIP 5.</span> 매주{" "}
+      <span className="font-bold text-white">수요일 10시 30분</span> —{" "}
+      <span className="text-amber-300 font-semibold">‘나는 솔로’ 함께 봐요 💞</span>
+    </li>
+  </ul>
+</div>
+
 
         {/* 외부 음식/주류 안내 */}
         <div className="bg-[#1f1f1f] border border-[#c5a572] rounded-xl p-4 text-sm text-gray-200 mb-6">
@@ -159,8 +254,68 @@ export default function MenuPage() {
             </p>
           </div>
         )}
-        
-        {menuData[activeCategory].map((item, idx) => {
+
+        {activeCategory === "안주" && (
+  <div className="mb-6 p-4 bg-[#2b2b2b] border border-[#d4af37] rounded-xl text-center shadow-md">
+    <p className="text-lg font-extrabold text-[#d4af37] mb-2">
+      🍴 안주 메뉴, 이 가격 실화?!
+    </p>
+    <p className="text-sm text-gray-200">
+      저렴하게 즐기고 안 먹으면 손해일걸요 😎
+    </p>
+  </div>
+)}
+
+        {activeCategory === "위스키" ? (
+          
+          <div>
+          {/* 바틀 주문 시 과일볼 서비스 강조 */}
+    <div className="mb-6 p-4 bg-[#2b2b2b] border border-[#d4af37] rounded-xl text-center shadow-md">
+      <p className="text-lg font-extrabold text-[#d4af37] mb-2">
+        🥂 위스키 바틀 주문 시!
+      </p>
+      <p className="text-sm text-gray-200">
+        과일볼 <span className="text-[#c5a572] font-bold">서비스 드립니다 🍊🍓🍍</span>
+      </p>
+
+      <div className="flex justify-center mt-4">
+        <img
+          src="/images/fruit.png" // 👉 public/images 폴더에 이미지 저장
+          alt="과일볼"
+          className="rounded-lg shadow-md w-48 h-auto"
+        />
+      </div>
+    </div>
+
+            {whiskyGroups.map((group, idx) => (
+              <div key={idx} className="mb-6">
+                <h3 className="font-bold text-[#c5a572] border-b border-[#555] pb-2 mb-3">
+                  {group.title}
+                </h3>
+                {group.items.map((item, i) => (
+                  <div key={i} className="flex justify-between items-center mb-2">
+                    <span className="text-gray-200">{item.name}</span>
+                    <span className="text-[#d4af37] font-semibold">{item.price}원</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+
+
+
+
+<div className="text-center mb-6">
+              <h2 className="text-xl font-bold text-[#d4af37] mb-2">이달의 위스키</h2>
+              <p className="text-gray-300">9,900원</p>
+            </div>
+
+            <div className="text-center mb-6">
+              <h2 className="text-xl font-bold text-[#d4af37] mb-2">사장님 픽 위스키</h2>
+              <p className="text-gray-300">싯가</p>
+            </div>
+          </div>
+        ) : (
+          menuData[activeCategory].map((item, idx) => {
           const isNew = item.name.includes("(*신메뉴)");
           return (
             <div
@@ -188,7 +343,12 @@ export default function MenuPage() {
               )}
             </div>
           );
-        })}
+        })
+        )}
+
+
+
+
       </div>
     </div>
   );
