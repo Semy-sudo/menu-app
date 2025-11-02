@@ -155,6 +155,12 @@ const menuData = {
     { name: "제임슨 하이볼", price: "15,000" },
     { name: "발베니 진저에일 하이볼", price: "16,000" }
   ],
+  "넌알코올": [
+    { name: "파리제트 논알콜", price: "10000" },
+    { name: "셜리템플 논알콜", price: "10000" },
+    { name: "블루라군 논알콜", price: "13,900" },
+    { name: "모히또 논알콜", price: "15,000" }
+  ],
 };
 
 export default function MenuPage() {
