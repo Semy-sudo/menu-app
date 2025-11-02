@@ -118,7 +118,7 @@ const menuData = {
     { name: "블루 라군", price: "19,900", description: "시원한 블루 빛깔, 바다 같은 청량감" },
     { name: "깔루아 코크/밀크", price: "10,900", description: "커피 리큐르의 달콤함과 부드러운 조화" },
     { name: "말리부 오렌지/콕/밀크", price: "10,900", description: "코코넛 향이 가득한 트로피컬 무드" },
-    { name: "모히토", price: "16,900", description: "민트와 라임이 선사하는 상쾌한 청량감" },
+    { name: "모히토", price: "16,900", description: "생라임 하나가 통째로! 상콤 청량을 느끼고 싶다면" },
     { name: "잭콕", price: "14,900", description: "전설적인 조합, 잭다니엘과 콜라의 클래식" },
     { name: "잭허니 밀크", price: "15,900", description: "꿀처럼 달콤하고 부드러운 잭허니의 변주" }
   ],
