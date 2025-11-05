@@ -31,8 +31,8 @@ const whiskyGroups = [
       { name: "아드백 10Y", price: "22,000원 / 30만" },
       { name: "라프로익 10Y", price: "22,000원 / 32만" },
       { name: "조니워커 블랙", price: "13,000원 / 12만" },
-      { name: "조니워커 그린", price: "15,000원" },
-      { name: "조니워커 루비", price: "17,000원" },
+      { name: "조니워커 그린", price: "15,000" },
+      { name: "조니워커 루비", price: "17,000" },
       { name: "조니워커 블루 (Bottle Only)", price: "45만" },
     ],
   },
@@ -73,7 +73,9 @@ const menuData = {
     { name: "과일향과 구운맥아의 미국식 페일에일 - APA", price: "11,500" },
     { name: "[임시품절]청량감 - 기본 라거", price: "8,900" },
     { name: "홉의 개성을 느낄수 있는 라거 - 꿀꺽(*신메뉴)", price: "11,000" },
-    { name: "커피, 초콜릿, 7가지 맥아의 다크에일 - 캄캄(*신메뉴)", price: "13,000" }
+    { name: "커피, 초콜릿, 7가지 맥아의 다크에일 - 캄캄(*신메뉴)", price: "13,000" },
+    { name: "구름처럼 가볍게 흘려 마시는 - 구름 위트에일", price: "12,000" },
+    { name: "빈투바 초콜릿스타우드(*커밍쑨)", price: "14,000" }
   ],
   "병맥주": [
     { name: "기린", price: "8,900" },
@@ -84,7 +86,7 @@ const menuData = {
     { name: "인디카나 IPA", price: "13,500" },
     { name: "호가든(기본/로제)", price: "8,900" },
     { name: "스텔라", price: "10,000" },
-    { name: "듀체스 브루고뉴 와인맥주 750ml", price: "40,000" },
+    { name: "듀체스 브루고뉴 와인맥주 750ml", price: "56,000" },
     { name: "모스카토 스파클링 샴페인 750ml", price: "44,000" },
     { name: "밀크초콜릿 스타우드", price: "11,000" },
     { name: "꿀꺽", price: "13,000" },
@@ -323,6 +325,8 @@ export default function MenuPage() {
         ) : (
           menuData[activeCategory].map((item, idx) => {
           const isNew = item.name.includes("(*신메뉴)");
+          const isCommingSoon = item.name.includes("(*커밍쑨)");
+
           return (
             <div
               key={idx}
@@ -330,10 +334,19 @@ export default function MenuPage() {
             >
               <div className="flex justify-between items-center">
                 <span className="text-gray-200 font-semibold flex items-center gap-2">
-                  {isNew ? item.name.replace("(*신메뉴)", "") : item.name}
+                  {item.name
+    .replace("(*신메뉴)", "")
+    .replace("(*커밍쑨)", "")
+    .trim()}
+                  
                   {isNew && (
                     <span className="text-xs bg-gradient-to-r from-[#c5a572] to-[#d4af37] text-black px-2 py-0.5 rounded-full font-bold shadow">
                       신메뉴
+                    </span>
+                  )}
+                  {isCommingSoon && (
+                    <span className="text-xs bg-gradient-to-r from-[#5dade2] to-[#2e86c1] text-white px-2 py-0.5 rounded-full font-bold shadow">
+                      커밍쑨
                     </span>
                   )}
                 </span>
