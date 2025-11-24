@@ -15,14 +15,17 @@ const whiskyGroups = [
   {
     title: "🏴 스코틀랜드 / 스페이사이드 (셰리 / 밸런스)",
     items: [
+      { name: "달위니 15Y", price: "22,000원 / 28만" },
       { name: "발베니 12Y", price: "22,000원 / 30만" },
       { name: "발베니 14Y 캐리비안 캐스크", price: "29,000원 / 40만" },
       { name: "맥캘란 더블 캐스크", price: "19,000원 / 29만" },
       { name: "맥캘란 셰리 캐스크", price: "29,000원 / 38만" },
       { name: "글랜피딕 15Y", price: "23,000원 / 29만" },
+      { name: "글랜피딕 18Y", price: "31,000원 / 45만" },
+      { name: "글렌드로낙 12Y", price: "23,000원 / 29만" },
       { name: "발렌타인 10Y", price: "13,000원 / 8만" },
       { name: "발렌타인 17Y", price: "32,000원 / 30만" },
-      { name: "로얄살루트 21Y (Bottle Only)", price: "54만" },
+      { name: "로얄살루트 21Y (Bottle Only)", price: "54만" }
     ],
   },
   {
@@ -31,7 +34,7 @@ const whiskyGroups = [
       { name: "아드백 10Y", price: "22,000원 / 30만" },
       { name: "라프로익 10Y", price: "22,000원 / 32만" },
       { name: "조니워커 블랙", price: "13,000원 / 12만" },
-      { name: "조니워커 그린", price: "15,000" },
+      { name: "조니워커 그린", price: "15,000원 / 22만" },
       { name: "조니워커 루비", price: "17,000" },
       { name: "조니워커 블루 (Bottle Only)", price: "45만" },
     ],
@@ -60,7 +63,7 @@ const whiskyGroups = [
   {
     title: "🇲🇽 멕시코 (데킬라)",
     items: [
-      { name: "호세 쿠엘보", price: "12,000원 / 8만" },
+      { name: "호세 쿠엘보", price: "12,000원 / 15만" },
       { name: "1800 아네호", price: "18,000원 / 25만" },
     ],
   },
@@ -96,8 +99,8 @@ const menuData = {
   "안주": [
     { name: "기본초콜릿", price: "3,000" },
     { name: "팝콘", price: "4,000" },
-    { name: "마약치즈크래커", price: "5,500" },
-    { name: "수제 카사타(*신메뉴)", price: "8,000" },
+    { name: "마약치즈크래커", price: "6,500" },
+    { name: "[임시품절]수제 카사타(*신메뉴)", price: "8,000" },
     { name: "참치치즈카나페", price: "15,000" },
     { name: "1인과일볼", price: "12,900" },
     { name: "치즈나쵸", price: "9,500" },
@@ -212,7 +215,7 @@ export default function MenuPage() {
           <p className="mb-1">□ 외부 음식 : 무료 </p>
           <p className="mb-1">□ 외부 주류</p>
           <p className="ml-4">와인 30,000원</p>
-          <p className="ml-4">위스키 50,000원 (병당 기준)</p>
+          <p className="ml-4">위스키 60,000원 (병당 기준)</p>
         </div>
 
         <p className="text-[#c5a572] mt-2 font-semibold">@sound_ye_sul</p>
@@ -287,11 +290,7 @@ export default function MenuPage() {
       </p>
 
       <div className="flex justify-center mt-4">
-        <img
-          src="/images/fruit.png" // 👉 public/images 폴더에 이미지 저장
-          alt="과일볼"
-          className="rounded-lg shadow-md w-48 h-auto"
-        />
+       
       </div>
     </div>
 
