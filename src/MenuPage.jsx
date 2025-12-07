@@ -97,16 +97,15 @@ const menuData = {
     { name: "희구", price: "18,000" }
   ],
   "안주": [
+    { name: "참치치즈카나페", price: "15,000" },
+    { name: "커리부어스트 소시지(*신메뉴)", price: "13,000" },
+    { name: "오지치즈후라이", price: "12,000" },
     { name: "기본초콜릿", price: "3,000" },
     { name: "팝콘", price: "4,000" },
     { name: "마약치즈크래커", price: "6,500" },
-    { name: "[임시품절]수제 카사타(*신메뉴)", price: "8,000" },
-    { name: "참치치즈카나페", price: "15,000" },
     { name: "1인과일볼", price: "12,900" },
     { name: "치즈나쵸", price: "9,500" },
-    { name: "1인마른안주(육포+마요소스 & 견과류)", price: "8,000" },
-    { name: "감자튀김", price: "10,000" },
-    { name: "커리부어스트 소시지(*신메뉴)", price: "13,000" },
+    { name: "1인마른안주(육포+마요소스 & 견과류)", price: "8,000" }
   ],
   "칵테일": [
     { name: "진토닉", price: "14,900", description: "시트러스 향 가득, 가장 클래식한 칵테일" },
@@ -254,9 +253,9 @@ export default function MenuPage() {
             
             {/* 가격 이벤트 */}
             <p className="text-sm text-[#f5f5dc] mb-1">
-              <span className="text-[#e2ca7a] font-bold">생맥 주문시! 감자튀김 </span> 
-              <span className="line-through text-gray-500 mr-2">10,000원</span>
-              <span className="text-[#d4af37] font-bold">9,000원</span>
+              <span className="text-[#e2ca7a] font-bold">생맥 주문시! 오지치즈후라이 </span> 
+              <span className="line-through text-gray-500 mr-2">12,000원</span>
+              <span className="text-[#d4af37] font-bold">11,000원</span>
             </p>
             
             {/* 프라이즈 문구 */}
