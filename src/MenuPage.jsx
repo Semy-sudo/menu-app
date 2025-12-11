@@ -4,13 +4,13 @@ const whiskyGroups = [
   {
     title: "🇺🇸 미국 (버번)",
     items: [
-      { name: "메이커스마크 버번", price: "12,000원 / 9만" },
+      { name: "메이커스마크 버번", price: "12,000원 / (품절)9만" },
       { name: "우드포드리저브", price: "15,000원 / 16만" },
     ],
   },
   {
     title: "🇮🇪 아일랜드 (버번 캐스크)",
-    items: [{ name: "부쉬밀 10Y", price: "12,000원 / 13만" }],
+    items: [{ name: "부쉬밀 10Y", price: "12,000원 / (품절)13만" }],
   },
   {
     title: "🏴 스코틀랜드 / 스페이사이드 (셰리 / 밸런스)",
@@ -33,7 +33,7 @@ const whiskyGroups = [
     items: [
       { name: "아드백 10Y", price: "22,000원 / 30만" },
       { name: "라프로익 10Y", price: "22,000원 / 32만" },
-      { name: "조니워커 블랙", price: "13,000원 / 12만" },
+      { name: "조니워커 블랙", price: "13,000원 / 14만" },
       { name: "조니워커 그린", price: "15,000원 / 22만" },
       { name: "조니워커 루비", price: "17,000" },
       { name: "조니워커 블루 (Bottle Only)", price: "45만" },
