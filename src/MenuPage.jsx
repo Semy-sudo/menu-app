@@ -165,6 +165,9 @@ const menuData = {
     { name: "블루라군 논알콜", price: "13,900" },
     { name: "모히또 논알콜", price: "15,000" }
   ],
+  "기타": [
+    { name: "즉석 필름사진", price: "3,000" }
+  ],
 };
 
 export default function MenuPage() {
@@ -275,6 +278,7 @@ export default function MenuPage() {
     </p>
   </div>
 )}
+
 
         {activeCategory === "위스키" ? (
           
