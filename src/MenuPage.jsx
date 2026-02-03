@@ -72,7 +72,6 @@ const whiskyGroups = [
 const menuData = {
   "생맥주": [
     { name: "기네스", price: "13,000" },
-    { name: "커피, 초콜릿, 7가지 맥아의 다크에일 - 캄캄(*신메뉴)", price: "13,000" },
 
   ],
   "병맥주": [
