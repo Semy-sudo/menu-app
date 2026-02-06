@@ -7,23 +7,23 @@ const whiskyGroups = [
   {
     title: "🇺🇸 미국",
     items: [
-      { name: "메이커스마크 버번", price: "12,000원 / (품절)9만" },
+      { name: "메이커스마크 버번", price: "12,000원 / 9만" },
       { name: "우드포드리저브", price: "15,000원 / 16만" },
     ],
   },
   {
     title: "🇮🇪 아일랜드",
-    items: [{ name: "부쉬밀 10Y", price: "12,000원 / (품절)13만" }],
+    items: [{ name: "부쉬밀 10Y", price: "12,000원 / 13만" }],
   },
   {
     title: "🏴 스코틀랜드",
     items: [
-      { name: "달위니 15Y", price: "22,000원 / 28만" },
+      { name: "달위니 15Y", price: "15,000원 / 28만" },
       { name: "발베니 12Y", price: "16,000원 / 30만" },
       { name: "발베니 14Y 캐리비안 캐스크", price: "29,000원 / 40만" },
       { name: "맥캘란 더블 캐스크", price: "19,000원 / 29만" },
       { name: "맥캘란 셰리 캐스크", price: "29,000원 / 38만" },
-      { name: "글랜피딕 15Y", price: "23,000원 / 29만" },
+      { name: "글랜피딕 15Y", price: "22,000원 / 29만" },
       { name: "글랜피딕 18Y", price: "31,000원 / 45만" },
       { name: "글렌드로낙 12Y", price: "23,000원 / 29만" },
       { name: "발렌타인 10Y", price: "13,000원 / 8만" },
@@ -31,7 +31,7 @@ const whiskyGroups = [
     ],
   },
   {
-    title: "🏴 스코틀랜드 / 아일라",
+    title: "🏴  아일라",
     items: [
       { name: "아드백 10Y", price: "22,000원 / 30만" },
       { name: "라프로익 10Y", price: "22,000원 / 32만" },
@@ -49,7 +49,7 @@ const whiskyGroups = [
     ],
   },
   {
-    title: "🏴 스코틀랜드 / 아란섬",
+    title: "🏴 Isle of Arran",
     items: [
       { name: "아란 10Y", price: "19,000원 / 25만" },
       { name: "아란 셰리 캐스크", price: "33,000원 / 35만" },
@@ -96,7 +96,7 @@ const menuData = {
 
   안주: [
     { name: "참치치즈카나페", price: "15,000" },
-    { name: "커리부어스트 소시지(*신메뉴)", price: "16,000" },
+    { name: "커리부어스트 소시지", price: "16,000" },
     { name: "베이컨듬뿍 투움바파스타", price: "13,000" },
     { name: "오지치즈후라이", price: "12,000" },
     { name: "기본초콜릿", price: "3,000" },
