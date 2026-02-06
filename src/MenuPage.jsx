@@ -49,7 +49,7 @@ const whiskyGroups = [
     ],
   },
   {
-    title: "🏴 Isle of Arran",
+    title: "🏴 아란섬",
     items: [
       { name: "아란 10Y", price: "19,000원 / 25만" },
       { name: "아란 셰리 캐스크", price: "33,000원 / 35만" },
