@@ -9,6 +9,7 @@ const whiskyGroups = [
     items: [
       { name: "메이커스마크 버번", price: "12,000원 / 9만" },
       { name: "우드포드리저브", price: "15,000원 / 16만" },
+      { name: "와일드터키81", price: "13,000원 / 16만" },
     ],
   },
   {
