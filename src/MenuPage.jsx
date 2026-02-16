@@ -162,7 +162,7 @@ export default function MenuPage() {
 
       {/* 이벤트 배너 */}
       <div className="w-full max-w-xl bg-gradient-to-r from-[#ff4d4d] to-[#ff0000] text-white rounded-2xl p-4 text-center shadow-lg">
-        <p className="font-bold">영수증 리뷰 이벤트</p>
+        <p className="font-bold">영수증 리뷰 이벤트 참여 시</p>
         <p className="font-extrabold">시그니처 칵테일 1잔 서비스 🍸</p>
       </div>
 
