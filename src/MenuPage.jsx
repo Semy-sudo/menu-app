@@ -7,9 +7,9 @@ const whiskyGroups = [
   {
     title: "🇺🇸 미국",
     items: [
-      { name: "메이커스마크 버번", price: "12,000원 / 9만" },
+      { name: "메이커스마크 버번", price: "12,000원 / 12만" },
       { name: "우드포드리저브", price: "15,000원 / 16만" },
-      { name: "와일드터키81", price: "13,000원 / 16만" },
+      { name: "와일드터키81", price: "13,000원 / (임시품절)16만" },
     ],
   },
   {
@@ -21,11 +21,11 @@ const whiskyGroups = [
     items: [
       { name: "달위니 15Y", price: "15,000원 / 28만" },
       { name: "발베니 12Y", price: "16,000원 / 30만" },
-      { name: "발베니 14Y 캐리비안 캐스크", price: "29,000원 / 40만" },
+      { name: "발베니 14Y 럼 캐스크", price: "29,000원 / 40만" , badge: "발베니 12Y 시음가능" },
       { name: "맥캘란 더블 캐스크", price: "19,000원 / 29만" },
-      { name: "맥캘란 셰리 캐스크", price: "29,000원 / 38만" },
+      { name: "맥캘란 셰리 캐스크", price: "29,000원 / 38만" , badge: "맥캘란 더블 시음가능" },
       { name: "글랜피딕 15Y", price: "18,000원 / 29만" },
-      { name: "글랜피딕 18Y", price: "31,000원 / 45만" },
+      { name: "글랜피딕 18Y", price: "31,000원 / 45만" , badge: "글렌피딕 15Y 시음가능" },
       { name: "글렌드로낙 12Y", price: "23,000원 / 29만" },
       { name: "발렌타인 10Y", price: "13,000원 / 8만" },
       { name: "발렌타인 17Y", price: "32,000원 / 30만" },
@@ -195,11 +195,27 @@ export default function MenuPage() {
               </h3>
 
               {group.items.map((item, i) => (
-                <div key={i} className="flex justify-between mb-2">
-                  <span>{item.name}</span>
-                  <span className="text-[#ff8c00]">{item.price}</span>
-                </div>
-              ))}
+  <div key={i} className="flex justify-between items-center mb-2">
+
+    {/* 왼쪽 이름 + 쿠폰 */}
+    <div className="flex items-center gap-2">
+      <span>{item.name}</span>
+
+      {item.badge && (
+        <span className="text-xs bg-gradient-to-r from-[#ff8c00] to-[#ff4d4d] text-black px-2 py-0.5 rounded-full shadow font-bold">
+  {item.badge}
+</span>
+
+      )}
+    </div>
+
+    {/* 가격 */}
+    <span className="text-[#ff8c00]">{item.price}</span>
+  </div>
+))}
+
+
+
             </div>
           ))
         ) : (
