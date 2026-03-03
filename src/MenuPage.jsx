@@ -79,9 +79,8 @@ const menuData = {
   생맥주: [{ name: "기네스", price: "13,000" }],
 
   병맥주: [
-    { name: "(*임시품절)기린", price: "8,900" },
-    { name: "산미구엘", price: "10,000" },
     { name: "빅웨이브", price: "10,500" },
+    { name: "코젤다크", price: "12,000" },
     { name: "코로나", price: "11,900" },
     { name: "하이네켄", price: "9,500" },
     { name: "인디카나 IPA", price: "13,500" },
@@ -89,7 +88,6 @@ const menuData = {
     { name: "스텔라", price: "10,000" },
     { name: "듀체스 브루고뉴 와인맥주 750ml", price: "56,000" },
     { name: "모스카토 스파클링 샴페인 750ml", price: "44,000" },
-    { name: "밀크초콜릿 스타우드", price: "11,000" },
     { name: "밀크초콜릿 스타우드", price: "11,000" },
     { name: "올드라스푸틴", price: "16,000" },
     { name: "꿀꺽", price: "13,000" },
