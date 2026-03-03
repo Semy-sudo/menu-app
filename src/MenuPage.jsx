@@ -118,7 +118,7 @@ const menuData = {
     { name: "프리미엄 블랙 러시안", price: "22,900", description: "묵직한 커피 향" },
     { name: "파우스트", price: "23,900", description: "도수 높은 악마의 칵테일" },
     { name: "아이리쉬카밤", price: "16,900", description: "폭발적인 조합" },
-    { name: "블루 라군", price: "16,900", description: "바다 같은 청량감" },
+    { name: "블루 라군", price: "19,900", description: "바다 같은 청량감" },
     { name: "깔루아 코크/밀크", price: "10,900", description: "달콤한 커피 리큐르" },
     { name: "말리부 오렌지/콕/밀크", price: "10,900", description: "코코넛 트로피컬" },
     { name: "모히토", price: "16,900", description: "생라임 상콤함" },
