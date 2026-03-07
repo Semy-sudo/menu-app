@@ -78,6 +78,15 @@ const whiskyGroups = [
 const menuData = {
   생맥주: [{ name: "기네스", price: "13,000" }],
 
+  무료: [
+    { name: "노래신청", price: " 0" },
+    { name: "영수증 리뷰시", price: "칵테일한잔 무료(파우스트,마티니 X)  /참가비 0" },
+    { name: "젠가 이기면", price: "도파민 초콜릿 제공  /참가비 0" },
+    { name: "할리갈리 이기면", price: "팝콘안주 제공  /참가비 0" },
+    { name: "최종병기 활", price: "맞춘술 한잔 제공  /참가비 5000" },
+  ],
+
+
   병맥주: [
     { name: "(임시품절)빅웨이브", price: "10,500" },
     { name: "코젤다크", price: "12,000" },
@@ -158,8 +167,8 @@ export default function MenuPage() {
 
       {/* 이벤트 배너 */}
       <div className="w-full max-w-xl bg-gradient-to-r from-[#ff4d4d] to-[#ff0000] text-white rounded-2xl p-4 text-center shadow-lg">
-        <p className="font-bold">영수증 리뷰 이벤트 참여 시</p>
-        <p className="font-extrabold">시그니처 칵테일 1잔 서비스 🍸</p>
+        <p className="font-bold">@sound_ye_sul</p>
+        <p className="font-extrabold">🍸🥃🎶💬📚</p>
       </div>
 
       {/* 카테고리 */}
