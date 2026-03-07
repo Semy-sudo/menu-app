@@ -79,7 +79,7 @@ const menuData = {
   생맥주: [{ name: "기네스", price: "13,000" }],
 
   병맥주: [
-    { name: "빅웨이브", price: "10,500" },
+    { name: "(임시품절)빅웨이브", price: "10,500" },
     { name: "코젤다크", price: "12,000" },
     { name: "코로나", price: "11,900" },
     { name: "하이네켄", price: "9,500" },
